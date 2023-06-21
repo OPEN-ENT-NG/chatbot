@@ -1,17 +1,28 @@
+import {chatbotService} from "../services";
+
 interface IViewModel {
-    that: any;
-    $eval: any;
-    init(): void;
+    chatbotUrl: string;
 }
+
 declare var Webchat: any;
 
-const vm: IViewModel = {
-    that: null,
-    $eval: null,
-    init: () => {
+class ViewModel implements IViewModel {
+    chatbotUrl: string;
+
+    constructor() {
+        this.initChatbot();
+    }
+
+    initChatbot = async () => {
+        this.chatbotUrl = await chatbotService.getChatbotUrl();
+
+        $("<script>")
+            .attr({src: `${this.chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`})
+            .appendTo(".sniplet-chatbot");
+
         setTimeout(() => Webchat.init({
             // Mandatory
-            botURL: 'https://chatbot.lyceeconnecte.fr/chatbot',
+            botURL: `${this.chatbotUrl}/chatbot`,
             // Optional
             chatWidth: '300px',
             chatHeight: '500px',
@@ -28,9 +39,7 @@ export const chatbotSniplet = {
     public: false,
     controller: {
         init: async function (): Promise<void> {
-            this.vm = vm;
-            vm.$eval = this.$eval;
-            vm.init();
+            this.vm = new ViewModel();
         }
     }
 };

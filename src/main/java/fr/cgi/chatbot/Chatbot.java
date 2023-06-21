@@ -14,7 +14,7 @@ public class Chatbot extends BaseServer {
 
 		Storage storage = new StorageFactory(vertx, config).getStorage();
 
-		ServiceFactory serviceFactory = new ServiceFactory(vertx, storage);
+		ServiceFactory serviceFactory = new ServiceFactory(vertx, storage, config);
 
 		addController(new ChatbotController(serviceFactory));
 	}
