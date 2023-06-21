@@ -1,0 +1,11 @@
+{
+	"main" : "fr.cgi.chatbot.Chatbot",
+	"port" : 8481,
+	"app-name" : "Chatbot",
+	"app-address" : "/chatbot",
+	"app-icon" : "Chatbot-large",
+	"app-displayName" : "Chatbot",
+	"mode": "dev",
+	"entcore.port" : 8090,
+	"auto-redeploy": false
+}
