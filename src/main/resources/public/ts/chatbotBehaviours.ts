@@ -1,10 +1,10 @@
-import {chatbotSniplet} from "./sniplets/chatbot";
+import {Chatbot} from "./chatbot";
 
 export const chatbotBehaviours = {
     rights: {
-
+        workflow: {
+            access: 'fr.cgi.chatbot.controller.ChatbotController|view'
+        }
     },
-    sniplets: {
-        'chatbot': chatbotSniplet
-    }
+    chatbot: new Chatbot()
 };

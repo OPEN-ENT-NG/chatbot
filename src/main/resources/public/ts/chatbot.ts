@@ -1,4 +1,4 @@
-import {chatbotService} from "../services";
+import {chatbotService} from "./services";
 
 interface IViewModel {
     chatbotUrl: string;
@@ -6,19 +6,26 @@ interface IViewModel {
 
 declare var Webchat: any;
 
-class ViewModel implements IViewModel {
+export class Chatbot implements IViewModel {
     chatbotUrl: string;
 
     constructor() {
-        this.initChatbot();
     }
 
-    initChatbot = async () => {
+    init = async () => {
         this.chatbotUrl = await chatbotService.getChatbotUrl();
+
+        $("<div>")
+            .addClass("chatbot-container")
+            .appendTo("body");
+
+        $("<div>")
+            .attr({id: "webchat", style: "z-index: 999999;"})
+            .appendTo(".chatbot-container");
 
         $("<script>")
             .attr({src: `${this.chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`})
-            .appendTo(".sniplet-chatbot");
+            .appendTo(".chatbot-container");
 
         setTimeout(() => Webchat.init({
             // Mandatory
@@ -33,13 +40,3 @@ class ViewModel implements IViewModel {
         }), 1000);
     }
 }
-
-export const chatbotSniplet = {
-    title: 'chatbot.title',
-    public: false,
-    controller: {
-        init: async function (): Promise<void> {
-            this.vm = new ViewModel();
-        }
-    }
-};

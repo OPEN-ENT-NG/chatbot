@@ -1,4 +1,4 @@
-import {ng, template} from 'entcore';
+import {Behaviours, ng, template} from 'entcore';
 import {IScope} from "angular";
 
 declare let window: any;
@@ -25,6 +25,8 @@ class Controller implements IViewModel {
 		this.route({
 			defaultView: () => {
 				template.open('main', `main`);
+				console.log('main');
+				Behaviours.applicationsBehaviours['chatbot'].chatbot.init();
 			}
 		});
 	}
