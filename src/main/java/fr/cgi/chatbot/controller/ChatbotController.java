@@ -29,13 +29,12 @@ public class ChatbotController extends ControllerHelper {
 
     @Get("")
     @ApiDoc("Render view")
-    @SecuredAction("view")
+    @SecuredAction("chatbot.view")
     public void view(HttpServerRequest request) {
         UserUtils.getUserInfos(eb, request, user -> {
             JsonObject context = new JsonObject().put("myId", user.getUserId());
             renderView(request, context);
         });
-        eventStore.createAndStoreEvent("ACCESS", request);
     }
 
     @Get("/config")
