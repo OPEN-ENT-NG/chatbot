@@ -38,5 +38,8 @@ gulp.task('build', ['webpack'], () => {
     var copyBehaviours = gulp.src('./src/main/resources/public/dist/behaviours.js')
         .pipe(gulp.dest('./src/main/resources/public/js'));
 
-    return merge[refs, copyBehaviours];
+    var copyChatbot = gulp.src('./src/main/resources/public/dist/chatbot.js')
+        .pipe(gulp.dest('./src/main/resources/public/js'));
+
+    return merge[refs, copyBehaviours, copyChatbot];
 });

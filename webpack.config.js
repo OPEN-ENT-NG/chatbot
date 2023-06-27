@@ -5,7 +5,8 @@ module.exports = {
     context: path.resolve(__dirname, './src/main/resources/public/'),
     entry: {
         application: './ts/app.ts',
-        behaviours: './ts/behaviours.ts'
+        behaviours: './ts/behaviours.ts',
+        chatbot: './ts/chatbot-script.ts',
     },
     output: {
         filename: './[name].js',

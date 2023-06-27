@@ -1,4 +1,4 @@
-import {Chatbot} from "./chatbot";
+import {chatbot} from "./chatbot";
 
 export const chatbotBehaviours = {
     rights: {
@@ -6,5 +6,5 @@ export const chatbotBehaviours = {
             access: 'fr.cgi.chatbot.controller.ChatbotController|view'
         }
     },
-    chatbot: new Chatbot()
+    chatbot: chatbot
 };

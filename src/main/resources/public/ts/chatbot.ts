@@ -1,19 +1,11 @@
 import {chatbotService} from "./services";
 
-interface IViewModel {
-    chatbotUrl: string;
-}
-
 declare var Webchat: any;
 
-export class Chatbot implements IViewModel {
-    chatbotUrl: string;
+export const chatbot = {
 
-    constructor() {
-    }
-
-    init = async () => {
-        this.chatbotUrl = await chatbotService.getChatbotUrl();
+    init: async function () {
+        let chatbotUrl = await chatbotService.getChatbotUrl();
 
         $("<div>")
             .addClass("chatbot-container")
@@ -24,12 +16,12 @@ export class Chatbot implements IViewModel {
             .appendTo(".chatbot-container");
 
         $("<script>")
-            .attr({src: `${this.chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`})
+            .attr({src: `${chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`})
             .appendTo(".chatbot-container");
 
         setTimeout(() => Webchat.init({
             // Mandatory
-            botURL: `${this.chatbotUrl}/chatbot`,
+            botURL: `${chatbotUrl}/chatbot`,
             // Optional
             chatWidth: '300px',
             chatHeight: '500px',
