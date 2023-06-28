@@ -1,1 +1,48 @@
-# chatbots-connector
+# À propos du Connecteur Chatbots
+
+* Licence : [AGPL v3](http://www.gnu.org/licenses/agpl.txt) - Copyright Région Nouvelle Aquitaine
+* Propriétaire(s) : CGI
+* Mainteneur(s) : CGI
+* Financeur(s) : Région Nouvelle Aquitaine
+* Description : Module permettant l'intégration d'un chatbot dans l'ENT
+
+## Configuration du module chatbots-connector dans le projet OPEN ENT
+
+Dans le fichier 'ent-core.json.template' du projet OPEN ENT :
+
+<pre>
+    {
+      "name": "fr.cgi~chatbot~0.1-SNAPSHOT",
+      "config": {
+        "main" : "fr.cgi.chatbot.Chatbot",
+        "port" : 8481,
+        "app-name" : "Chatbot",
+    	"app-address" : "/chatbot",
+    	"app-icon" : "Chatbot-large",
+        "host": "${host}",
+        "ssl" : false,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "integration-mode" : "HTTP",
+        "app-registry.port" : 8012,
+        "mode" : "${mode}",
+        "entcore.port" : 8009,
+        "chatbot-url": "https://chatbot.example.fr"
+      }
+    }
+</pre>
+
+Le paramètre "chatbot-url" correspond à l'URL du chatbot.
+
+Associer une route d'entrée à la configuration du module proxy intégré (`"name": "com.wse~http-proxy~1.0.0"`) :
+<pre>
+      {
+        "location": "/chatbot",
+        "proxy_pass": "http://localhost:8481"
+      }
+</pre>
+
+# Gestion des droits
+
+* "chatbot.view" : Accéder et afficher le chatbot
+
