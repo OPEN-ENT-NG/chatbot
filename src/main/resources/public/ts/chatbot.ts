@@ -30,6 +30,8 @@ export const chatbot = {
                 iconSize: '30px',
                 iconColor: '#ffffff'
             });
+
+            $("#iframe-bot").css("background", "#fff");
         };
 
         document.querySelector('.chatbot-container').appendChild(script);
