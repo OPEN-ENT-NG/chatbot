@@ -15,20 +15,24 @@ export const chatbot = {
             .attr({id: "webchat", style: "z-index: 999999;"})
             .appendTo(".chatbot-container");
 
-        $("<script>")
-            .attr({src: `${chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`})
-            .appendTo(".chatbot-container");
+        var script = document.createElement('script');
+        script.src = `${chatbotUrl}/backoffice/assets/scripts/embbed-chatbot.min.js`;
 
-        setTimeout(() => Webchat.init({
-            // Mandatory
-            botURL: `${chatbotUrl}/chatbot`,
-            // Optional
-            chatWidth: '300px',
-            chatHeight: '500px',
-            buttonSize: '60px',
-            buttonColor: '#6e91f0',
-            iconSize: '30px',
-            iconColor: '#ffffff'
-        }), 1000);
+        script.onload = function() {
+            Webchat.init({
+                // Mandatory
+                botURL: `${chatbotUrl}/chatbot`,
+                // Optional
+                chatWidth: '300px',
+                chatHeight: '500px',
+                buttonSize: '60px',
+                buttonColor: '#e20037',
+                iconSize: '30px',
+                iconColor: '#ffffff'
+            });
+        };
+
+        document.querySelector('.chatbot-container').appendChild(script);
+
     }
 }
