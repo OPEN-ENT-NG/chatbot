@@ -46,3 +46,13 @@ Associer une route d'entrée à la configuration du module proxy intégré (`"na
 
 * "chatbot.view" : Accéder et afficher le chatbot
 
+# Configuration Nginx
+
+Dans le fichier de configuration nginx du serveur Chatbot, ajouter un header Content-Security-Policy pour permettre
+l'affichage de l'iframe chatbot dans l'ENT.
+
+<pre>
+    Content-Security-Policy "frame-ancestors 'none' 'http://url-plateforme-ent.fr';"
+</pre>
+
+
