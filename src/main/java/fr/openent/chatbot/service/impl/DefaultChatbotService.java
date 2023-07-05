@@ -1,6 +1,6 @@
-package fr.cgi.chatbot.service.impl;
+package fr.openent.chatbot.service.impl;
 
-import fr.cgi.chatbot.service.ChatbotService;
+import fr.openent.chatbot.service.ChatbotService;
 public class DefaultChatbotService implements ChatbotService {
     public DefaultChatbotService() {
     }

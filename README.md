@@ -12,9 +12,9 @@ Dans le fichier 'ent-core.json.template' du projet OPEN ENT :
 
 <pre>
     {
-      "name": "fr.cgi~chatbot~0.1-SNAPSHOT",
+      "name": "fr.openent~chatbot~version",
       "config": {
-        "main" : "fr.cgi.chatbot.Chatbot",
+        "main" : "fr.openent.chatbot.Chatbot",
         "port" : 8481,
         "app-name" : "Chatbot",
     	"app-address" : "/chatbot",

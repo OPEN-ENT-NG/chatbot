@@ -1,4 +1,4 @@
-package fr.cgi.chatbot.helper;
+package fr.openent.chatbot.helper;
 
 import org.entcore.common.user.UserInfos;
 

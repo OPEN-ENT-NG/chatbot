@@ -1,4 +1,4 @@
-package fr.cgi.chatbot.service;
+package fr.openent.chatbot.service;
 
 public interface ChatbotService {
 

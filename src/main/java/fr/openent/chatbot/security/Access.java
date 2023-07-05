@@ -1,8 +1,8 @@
-package fr.cgi.chatbot.security;
+package fr.openent.chatbot.security;
 
 
-import fr.cgi.chatbot.core.enums.WorkflowActions;
-import fr.cgi.chatbot.helper.WorkflowHelper;
+import fr.openent.chatbot.core.enums.WorkflowActions;
+import fr.openent.chatbot.helper.WorkflowHelper;
 import fr.wseduc.webutils.http.Binding;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpServerRequest;

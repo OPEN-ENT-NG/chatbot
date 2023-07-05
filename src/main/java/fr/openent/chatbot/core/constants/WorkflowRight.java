@@ -1,4 +1,4 @@
-package fr.cgi.chatbot.core.constants;
+package fr.openent.chatbot.core.constants;
 
 public class WorkflowRight {
 

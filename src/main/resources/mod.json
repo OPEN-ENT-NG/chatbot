@@ -1,5 +1,5 @@
 {
-	"main" : "fr.cgi.chatbot.Chatbot",
+	"main" : "fr.openent.chatbot.Chatbot",
 	"port" : 8481,
 	"app-name" : "Chatbot",
 	"app-address" : "/chatbot",

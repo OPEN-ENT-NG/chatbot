@@ -1,6 +1,6 @@
-package fr.cgi.chatbot.core.enums;
+package fr.openent.chatbot.core.enums;
 
-import fr.cgi.chatbot.core.constants.WorkflowRight;
+import fr.openent.chatbot.core.constants.WorkflowRight;
 
 public enum WorkflowActions {
     ACCESS(WorkflowRight.VIEW);
