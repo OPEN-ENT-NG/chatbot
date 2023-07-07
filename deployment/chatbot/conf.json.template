@@ -1,5 +1,5 @@
     {
-      "name": "fr.openent~chatbot~0.1-SNAPSHOT",
+      "name": "fr.openent~chatbot~1.0.0",
       "config": {
         "main" : "fr.openent.chatbot.Chatbot",
         "port" : 8481,
