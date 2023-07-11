@@ -13,8 +13,8 @@ module.exports = {
     },
     "testPathIgnorePatterns": [
         "/node_modules/",
-        "<rootDir>/chatbots-connector/build/",
-        "<rootDir>/chatbots-connector/out/"
+        "<rootDir>/chatbots/build/",
+        "<rootDir>/chatbots/out/"
     ],
     "verbose": true,
     "testURL": "http://localhost/",

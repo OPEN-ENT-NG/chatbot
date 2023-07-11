@@ -6,7 +6,7 @@
 * Financeur(s) : Région Nouvelle Aquitaine
 * Description : Module permettant l'intégration d'un chatbot dans l'ENT
 
-## Configuration du module chatbots-connector dans le projet OPEN ENT
+## Configuration du module chatbots dans le projet OPEN ENT
 
 Dans le fichier 'ent-core.json.template' du projet OPEN ENT :
 
