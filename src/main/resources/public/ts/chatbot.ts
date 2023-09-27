@@ -22,7 +22,7 @@ export const chatbot = {
             script.onload = function() {
                 Webchat.init({
                     // Mandatory
-                    botURL: `${chatbotUrl}/chatbot`,
+                    botURL: `${chatbotUrl}`,
                     // Optional
                     chatWidth: '300px',
                     chatHeight: '500px',
