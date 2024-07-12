@@ -41,3 +41,6 @@ rev-manifest.json
 /src/main/resources/public/css/
 /yarn.lock
 /yarn-error.log
+.env
+target
+dependency-reduced-pom.xml
