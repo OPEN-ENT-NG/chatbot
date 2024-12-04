@@ -12,7 +12,7 @@
 
     <groupId>fr.openent</groupId>
     <artifactId>chatbot</artifactId>
-    <version>2.0-b2school-SNAPSHOT</version>
+    <version>2.0-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:https://github.com/OPEN-ENT-NG/chatbot.git</connection>
@@ -29,7 +29,7 @@
     </repositories>
 
     <properties>
-        <entCoreVersion>5.0-b2school-SNAPSHOT</entCoreVersion>
+        <entCoreVersion>6.0-SNAPSHOT</entCoreVersion>
         <toolsVersion>2.0.0-final</toolsVersion>
         <junitVersion>5.1.0</junitVersion>
         <vertxCronTimer>2.0.0</vertxCronTimer>

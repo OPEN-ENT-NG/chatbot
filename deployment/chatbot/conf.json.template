@@ -1,5 +1,5 @@
     {
-      "name": "fr.openent~chatbot~2.0-b2school-SNAPSHOT",
+      "name": "fr.openent~chatbot~${chatbotVersion}",
       "config": {
         "main" : "fr.openent.chatbot.Chatbot",
         "port" : 8481,
