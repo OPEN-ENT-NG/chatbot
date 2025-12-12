@@ -4,7 +4,6 @@ import fr.openent.chatbot.config.ChatbotConfig;
 import fr.openent.chatbot.controller.ChatbotController;
 import fr.openent.chatbot.controller.MonitoringController;
 import fr.openent.chatbot.service.ServiceFactory;
-import fr.wseduc.webutils.collections.SharedDataHelper;
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
 import org.entcore.common.http.BaseServer;
