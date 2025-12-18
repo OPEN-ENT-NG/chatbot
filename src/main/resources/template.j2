@@ -1,0 +1,21 @@
+{
+  "name": "fr.openent~chatbot",
+  "config": {
+    "main" : "fr.openent.chatbot.Chatbot",
+    "port" : 8481,
+    "csrf-token": {{ csrfToken | default('true') }},
+    "app-name" : "chatbot",
+    "app-address" : "/chatbot",
+    "app-icon" : "chatbot-large",
+    "app-type" : "SYSTEM",
+    "host": "https://{{ host }}",
+    "ssl" : true,
+    "auto-redeploy": false,
+    "userbook-host": "https://{{ host }}",
+    "integration-mode": "{{ integration_mode|default('HTTP') }}",
+    "app-registry.port" : 8012,
+    "mode" : "prod",
+    "entcore.port" : 8009,
+    "chatbot-url": "{{ chatbotUrl|default('') }}"
+  }
+}
