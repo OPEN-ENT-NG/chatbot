@@ -2,6 +2,10 @@
   "name": "fr.openent~chatbot",
   "config": {
     "main" : "fr.openent.chatbot.Chatbot",
+    "probes": [
+      "org.entcore.common.http.health.Neo4jProbe",
+      "org.entcore.common.http.health.MongoProbe"
+    ],
     "port" : 8481,
     "csrf-token": {{ csrfToken | default('true') }},
     "app-name" : "chatbot",
